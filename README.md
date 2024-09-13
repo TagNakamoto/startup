@@ -1,1 +1,5 @@
-# startup
+# Startup: Answer Checker  
+An application to allow teachers and tutors to have students check their answers in real time and provides information on which problems people are missing the most to the teacher in charge.  
+
+## Elevator Pitch  
+In many disciplines, teachers can get bogged down by students simply wanting to check answers rather than asking questions that leverage their knowledge and expertise. This application allows teachers to have students check whether their answers are within a certain range without outright giving out the answers. This would alleviate stresses put on teachers and teaching assistants, freeing them up to help their students in the most effective manor, while still collecting information on which problems give people the most trouble.
