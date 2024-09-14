@@ -12,4 +12,20 @@ This will alleviate stresses put on teachers and teaching assistants in universi
 #### Sequence Diagram of Application  
 ![image](https://github.com/user-attachments/assets/fb5456d0-5224-4e52-ae2a-5717362f147c)  
 
+### Technologies Used
 
+1. **HTML** - Basic structures for the 3 different web pages (login, student, teacher)  
+
+2. **CSS** - Styling the website and making it visually appealing  
+
+3. **JavaScript** - Front-end logic and user interactions (logging in and checking answers)  
+
+4. **React** - Account for user input and interaction (buttons, inputs, results)  
+
+5. **Web Service** - Connecting to an API that checks answers against a database of properties  
+
+6. **Authentication** - Allowing students and teachers to log in or create accounts.  
+
+7. **Database Data** - Storing login data, and answer statistics data  
+
+8. **WebSocket Data** - Update students about their answer choices and teachers about question statistics
