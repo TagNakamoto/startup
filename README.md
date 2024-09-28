@@ -29,3 +29,13 @@ This will alleviate stresses put on teachers and teaching assistants in universi
 7. **Database Data** - Storing login data, and answer statistics data  
 
 8. **WebSocket Data** - Update students about their answer choices and teachers about question statistics
+
+
+## HTML Deliverable  
+For the startup HTML I implemented:  
+	- **HTML Pages** - Three HTML pages for login, answer checking (AnswerCheckerPage), and answer statistics (AnswerStatistics)  
+	- **Links** - Each page links to the GitHub for the project. Functionality to link from login to other pages based off login information  
+	- **Text** - Added text to explain webpages and cue user input  
+	- **Images** - I couldn't figure out how to include an image and so I didn't do this. 😔  
+	- **DB/Login** - Input box and submit button for login. The answer data table represents data pulled from the database.  
+	- **WebSocket** - Gives live data for answer statistics and instant feedback to the student using the answer checker.  
