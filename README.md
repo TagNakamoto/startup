@@ -35,7 +35,7 @@ This will alleviate stresses put on teachers and teaching assistants in universi
 For the startup HTML I implemented:  
 	- **HTML Pages** - Three HTML pages for login, answer checking (AnswerCheckerPage), and answer statistics (AnswerStatistics).  
 	- **3rd Party API** - Answer checker will pull data from a material property API as example answers.  
-	- **Links** - Each page links to the GitHub for the project. Functionality to link from login to other pages based off login information.  
+	- **Links** - Each page links to the GitHub for the project. Functionality to link from login to other pages based off login information. Links interconnect all pages for testing and grading purposes.   
 	- **Text** - Added text to explain webpages and cue user input.  
 	- **Images** - Added checkmark image as a kind of logo.
 	- **DB/Login** - Input box and submit button for login. The answer data table represents data pulled from the database.  
