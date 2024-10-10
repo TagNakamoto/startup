@@ -33,9 +33,29 @@ h1 {
     justify-content: left;
 }
 
-    .nav-menu li {
-        margin: 0 5px;
-    }
+.nav-menu li {
+    margin: 0 5px;
+ }
+h2{
+    color: black;
+}
+
+span { 
+    color:black;
+    text-align: center;
+}
+
+button {
+    color: black;
+}
+main {
+    flex: 1;
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: black
+}
 
 footer {
     flex: 0 20px;
@@ -44,4 +64,10 @@ footer {
     text-align: center;
     display: flex;
     justify-content: center;
+}
+span {
+    justify-content: left;
+}
+a {
+    justify-content: right;
 }
