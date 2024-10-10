@@ -25,3 +25,23 @@ h1 {
     color: white;
     margin-bottom: 1px;
 }
+.nav-menu {
+    margin: 2px 2px 2px 2px;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: left;
+}
+
+    .nav-menu li {
+        margin: 0 5px;
+    }
+
+footer {
+    flex: 0 20px;
+    background: hsl(180, 10%, 10%);
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
