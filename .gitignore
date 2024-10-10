@@ -1,7 +1,6 @@
 ﻿################################################################################
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
-/.vs/VSWorkspaceState.json
-/.vs/startup/FileContentIndex
-/.vs/startup/v17
-/.vs/slnx.sqlite
+
+/.vs
+/CS260Server.pem
