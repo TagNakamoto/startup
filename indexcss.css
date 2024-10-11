@@ -89,3 +89,6 @@ a {
 input{
     color: black;
 }
+img {
+    vertical-align: top;
+}
