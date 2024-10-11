@@ -9,16 +9,17 @@ body {
     margin: 0;
     display: flex;
     flex-direction: column;
-    flex:content;
+    flex: content;
 }
 
 main {
     flex-grow: 1;
 }
+
 html, body {
     height: 100%;
-    margin:0;
-    display:flex;
+    margin: 0;
+    display: flex;
     flex-direction: column;
 }
 
@@ -37,6 +38,7 @@ h1 {
     color: white;
     margin-bottom: 1px;
 }
+
 .nav-menu {
     margin: 2px 2px 2px 2px;
     padding: 0;
@@ -45,21 +47,23 @@ h1 {
     justify-content: left;
 }
 
-.nav-menu li {
-    margin: 0 5px;
- }
-h2{
+    .nav-menu li {
+        margin: 0 5px;
+    }
+
+h2 {
     color: black;
 }
 
-span { 
-    color:black;
+span {
+    color: black;
     text-align: center;
 }
 
 button {
     color: black;
 }
+
 main {
     flex: 1;
     font-size: 20px;
@@ -75,17 +79,18 @@ footer {
     color: white;
 }
 
-.text-reset{
-    color:white;
+.text-reset {
+    color: white;
 }
-a {
-    text-decoration: none;
-}
+/*footer a {
+    float: right;
+}*/
 .container-fluid {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-input{
+
+input {
     color: black;
 }
