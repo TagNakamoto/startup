@@ -4,34 +4,6 @@
     box-sizing: border-box;
 }
 
-body {
-    color: black;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    flex: content;
-}
-
-main {
-    flex: 1;
-    font-size: 20px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: start;
-    color: black;
-    flex-grow: 1;
-}
-
-html, body {
-    height: 100%;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-
 header {
     text-align: center;
     flex: 0 50px;
@@ -60,6 +32,26 @@ h1 {
         margin: 0 5px;
         text-decoration: none;
     }
+
+main {
+    flex: 1;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: start;
+    color: black;
+    flex-grow: 1;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: black;
+}
 
 h2 {
     color: black;
@@ -115,7 +107,6 @@ tr {
 button {
     color: black;
 }
-
 
 footer {
     flex: 0 20px;

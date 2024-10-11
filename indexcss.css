@@ -4,15 +4,45 @@
     color: white;
     box-sizing: border-box;
 }
-
-body {
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    flex:content;
+img {
+    vertical-align: top;
+}
+header {
+    text-align: center;
+    flex: 0 50px;
+    background: hsl(130, 80%, 25%);
+    justify-content: center;
 }
 
+
+
+h1 {
+    justify-content: center;
+    text-align: center;
+    flex: 0 1px;
+    color: white;
+    margin-bottom: 1px;
+}
+
+.nav-menu {
+    margin: 2px 2px 2px 2px;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: left;
+}
+
+    .nav-menu li {
+        margin: 0 5px;
+    }
 main {
+    flex: 1;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: black;
+    justify-content: start;
     flex-grow: 1;
 }
 html, body {
@@ -22,32 +52,6 @@ html, body {
     flex-direction: column;
 }
 
-
-header {
-    text-align: center;
-    flex: 0 50px;
-    background: hsl(130, 80%, 25%);
-    justify-content: center;
-}
-
-h1 {
-    justify-content: center;
-    text-align: center;
-    flex: 0 1px;
-    color: white;
-    margin-bottom: 1px;
-}
-.nav-menu {
-    margin: 2px 2px 2px 2px;
-    padding: 0;
-    list-style-type: none;
-    display: flex;
-    justify-content: left;
-}
-
-.nav-menu li {
-    margin: 0 5px;
- }
 h2{
     color: black;
 }
@@ -59,14 +63,6 @@ span {
 
 button {
     color: black;
-}
-main {
-    flex: 1;
-    font-size: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    color: black
 }
 
 footer {
@@ -88,7 +84,4 @@ a {
 }
 input{
     color: black;
-}
-img {
-    vertical-align: top;
 }
