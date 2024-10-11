@@ -27,6 +27,7 @@ html, body {
     margin: 0;
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 
 
@@ -72,7 +73,7 @@ table {
     width: 80%;
     border-collapse: collapse;
     margin: 20px 0;
-    text-align: left;
+    text-align: center;
 }
 
 thead {
@@ -126,8 +127,8 @@ a {
     text-decoration: none;
     color: white;
 }
-/*.container-fluid {
+.container-fluid {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}*/
+}
