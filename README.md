@@ -40,3 +40,12 @@ For the startup HTML I implemented:
 	- **Images** - Added checkmark image as a kind of logo.
 	- **DB/Login** - Input box and submit button for login. The answer data table represents data pulled from the database.  
 	- **WebSocket** - Gives live data for answer statistics and instant feedback to the student using the answer checker.  
+
+## CSS Deliverable  
+For the CSS deliverable I styled the following:  
+	- **Header, footer, and main content body**  
+	- **Size Responsiveness** - Website looks great for all sizings.    
+	- **Links** - I got rid of the underlines for link elements and made them cyan when hovered over.     
+	- **Application Elements** - Elements and whitespace looks good.    
+	- **Images** - Shifted spacing to be pleasing.  
+	- **Application Text** - I made sure there were consistent fonts.  
