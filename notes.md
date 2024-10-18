@@ -44,4 +44,111 @@ Padding affects the space in an element block, moving content away from the edge
 - document.getElementById("ID") retrieves an HTML element using its id.
 - element.addEventListener() attaches an event handler to an element, like when there is a click or a mouseover. Then the second is a function to execute when the event occurs.
 - document.querySelector('#elementID') returns an element that has this ID. JS can then change the html content or style and can add event listeners.
-- 
+- DOM: The Document Object Model. An object representation of HTML that browser uses to make display. It also allows us to manipulate the HTML. It is accessed with the "document" variable. You can inject HTML into the DOM, but to prevent attacks use DOM manipulation functions, not "innerHTML". Some of theses are event listeners.
+- By default, the span is inline. It does not create a new line.
+- CSS is boxes (inside->out): content->padding->border->margin
+- HTML tags: Paragraph \<p>, Ordered List \<ol>, Unordered List \<ul>, first level heading \<h1>, second \<h2>, third \<h3> <script> tag is for JS inclusion
+- It is possible to add properties to JS objects by force (obj.prop="val" or obj\[prop]="val")
+- JSON: Java-Script Object Notation. 
+
+```javascript, html, css examples
+<!DOCTYPE html>
+
+div {
+  background-color: red;
+}
+
+<img alt="Checkmark" width="30" height="30" src="https://www.publicdomainpictures.net/pictures/130000/velka/check-mark-icon.jpg" />
+
+const element = document.getElementById("byu");
+element.style.color = "green";
+
+if (condition1) {
+  
+} else if (condition2) {
+  
+} else {
+  
+}
+
+for (let i = 0; i < 5; i++) {
+  console.log(i);
+}
+
+while (condition) {
+  // code to be executed
+}
+
+do {
+  // code to be executed
+} while (condition);
+
+let day = 2;
+switch (day) {
+  case 1:
+    console.log("Monday");
+    break;
+  case 2:
+    console.log("Tuesday");
+    break;
+  default:
+    console.log("Another day");
+}
+
+const person = {
+  name: "John",
+  age: 30,
+  greet: function() {
+    console.log(`Hello, my name is ${this.name}`);
+  }
+};
+
+function Person(name, age) {
+  this.name = name;
+  this.age = age;
+  this.greet = function() {
+    console.log(`Hello, my name is ${this.name}`);
+  };
+}
+
+// Example
+const john = new Person("John", 30);
+
+
+The correct syntax for creating a JavaScript object is as follows:
+
+Object Literal Syntax
+javascript
+Copy code
+const myObject = {
+  property1: value1,
+  property2: value2,
+  method1: function() {
+    // method code
+  },
+  method2() {
+    // method code
+  }
+};
+
+// Example
+const person = {
+  name: "John",
+  age: 30,
+  greet: function() {
+    console.log(`Hello, my name is ${this.name}`);
+  }
+};
+Using the new Object() Syntax
+javascript
+Copy code
+const myObject = new Object();
+myObject.property1 = value1;
+myObject.property2 = value2;
+
+// Example
+const car = new Object();
+car.make = "Toyota";
+car.model = "Corolla";
+car.year = 2020;
+```
