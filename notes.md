@@ -49,8 +49,11 @@ Padding affects the space in an element block, moving content away from the edge
 - CSS is boxes (inside->out): content->padding->border->margin
 - HTML tags: Paragraph \<p>, Ordered List \<ol>, Unordered List \<ul>, first level heading \<h1>, second \<h2>, third \<h3> <script> tag is for JS inclusion
 - It is possible to add properties to JS objects by force (obj.prop="val" or obj\[prop]="val")
-- JSON: Java-Script Object Notation. 
-
+- JSON: Java-Script Object Notation.
+- Linux commands: chmod (changes file permissions), pwd (print working directory), cd (change directory), ls (list files and directories), vim (opens vim editor), nano (opens nano editor), mkdir (makes directory), mv (moves files/directories), man (gives manual for a command), ssh (connects to secure shell remote server), ps (prints active processes), wget (downloads files from web), sudo (super do).  
+- subdomain.root.topleveldomain eg startup.tnak3.click
+- DNS A record:  maps a domain to a specific IP address. It cannot point to another A record, but CNAME records can.
+- Ports and Protocols: 443 (HTTPS), 80 (HTTP), 22 (SSH/SecureShell
 ```javascript, html, css examples
 <!DOCTYPE html>
 
@@ -151,4 +154,27 @@ const car = new Object();
 car.make = "Toyota";
 car.model = "Corolla";
 car.year = 2020;
+
+//JSON document for 
+{
+  "class": {
+    "title": "web programming",
+    "description": "Amazing"
+  },
+  "enrollment": ["Marco", "Jana", "فَاطِمَة"],
+  "start": "2025-02-01",
+  "end": null,
+  "size": 3
+}
+
+const obj = { a: 2, b: 'crockford', c: undefined };
+const json = JSON.stringify(obj);
+const objFromJson = JSON.parse(json);
+
+console.log(obj, json, objFromJson);
+
+// OUTPUT:
+// {a: 2, b: 'crockford', c: undefined}
+// {"a":2, "b":"crockford"}
+// {a: 2, b: 'crockford'}
 ```
