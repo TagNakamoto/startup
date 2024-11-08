@@ -1,26 +1,26 @@
 // JavaScript source code
-//import React from 'react';
-//import { Link } from 'react-router-dom';
-import './indexcss.css';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import '../../AnswerCheckerPage.css';
 
-function AnswerStats() {
+function AnswerChecker() {
     return (
         <div>
-            <h2>Welcome to the Answer Checker</h2>
+            <h2>Input your calculated value for the homework</ h2>
             <form method="get" action="#">
                 <div>
-                    <span>Username</span>
-                    <input type="text" placeholder="your username" />
+                    <span>Question 1</span>
+                    <input type="number" placeholder="your answer" />
                 </div>
+                    <button type="submit">Check</button>
+            </form>
+            <form method="get" action="#">
                 <div>
-                    <span>Password</span>
-                    <input type="password" placeholder="password" />
+                    <button type="button">Log Out</button>
                 </div>
-                <button type="submit">Login</button>
-                <button type="submit">Create</button>
             </form>
         </div>
     );
 }
 
-export default Login;
+export default AnswerChecker;

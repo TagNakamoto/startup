@@ -1,9 +1,8 @@
-import React from "https://cdn.skypack.dev/react";
-import ReactDOM from "https://cdn.skypack.dev/react-dom";
+import React from "react";
 import App from './App';
+import { createRoot } from "react-dom/client";
 
 const rootElement = document.getElementById("root");
-const root = ReactDOM.createRoot(rootElement);
-
+const root = createRoot(rootElement);
 root.render(<App />);
 

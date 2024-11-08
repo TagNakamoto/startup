@@ -1,9 +1,20 @@
-// JavaScript source code
-//import React from 'react';
-//import { Link } from 'react-router-dom';
-import './indexcss.css';
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import '../../indexcss.css';
 
 function Login() {
+    const navigate = useNavigate();
+
+    const handleLoginClick = (e) => {
+        e.preventDefault();
+        navigate('/AnswerCheckerPage');
+    };
+
+    const handleCreateClick = (e) => {
+        e.preventDefault();
+        navigate('/AnswerCheckerPage');
+    };
+
     return (
         <div>
             <h2>Welcome to the Answer Checker</h2>
@@ -16,8 +27,8 @@ function Login() {
                     <span>Password</span>
                     <input type="password" placeholder="password" />
                 </div>
-                <button type="submit">Login</button>
-                <button type="submit">Create</button>
+                <button type="button" onClick={handleLoginClick}>Login</button>
+                <button type="button">Create</button>
             </form>
         </div>
     );

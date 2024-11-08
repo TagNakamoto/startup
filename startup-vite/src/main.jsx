@@ -1,9 +1,8 @@
-import React from "https://cdn.skypack.dev/react";
-import ReactDOM from "https://cdn.skypack.dev/react-dom@17";
+import React from "react";
 import App from './App';
+import { createRoot } from "react-dom/client";
 
 const rootElement = document.getElementById("root");
-
-// eslint-disable-next-line react/no-deprecated
-ReactDOM.render(<App />, rootElement);
+const root = createRoot(rootElement);
+root.render(<App />);
 

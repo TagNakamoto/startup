@@ -1,12 +1,12 @@
-//import React from "https://cdn.skypack.dev/react";
-import ReactDOM from "https://cdn.skypack.dev/react-dom";
+import React from "react";
+import ReactDOM from "react-dom";
 import {
     BrowserRouter,
     NavLink,
     Routes,
     Navigate,
     Route
-} from "https://cdn.skypack.dev/react-router-dom";
+} from "react-router-dom";
 import Login from "./Index";
 import AnswerChecker from "./AnswerCheckerPage"
 import AnswerStats from "./AnswerStatistics"
@@ -21,7 +21,7 @@ const App = () => (
             <div className='app'>
                 <NavLink to='/'>Login</NavLink>
                 <NavLink to='/AnswerCheckerPage'>Answer Checker</NavLink>
-                <NavLink to='/AnsweStatistics'>Answer Statistics</NavLink>
+                <NavLink to='/AnswerStatistics'>Answer Statistics</NavLink>
             </div>
         </header>
 
