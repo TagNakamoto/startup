@@ -1,9 +1,9 @@
 // JavaScript source code
-import React from 'react';
-import { Link } from 'react-router-dom';
+//import React from 'react';
+//import { Link } from 'react-router-dom';
 import './indexcss.css';
 
-function Login() {
+function AnswerStats() {
     return (
         <div>
             <h2>Welcome to the Answer Checker</h2>

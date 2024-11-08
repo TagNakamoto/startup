@@ -3,7 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './indexcss.css';
 
-function Login() {
+function AnswerStats() {
     return (
         <div>
             <h2>Welcome to the Answer Checker</h2>
@@ -23,4 +23,4 @@ function Login() {
     );
 }
 
-export default Login;
+export default AnswerStats;
