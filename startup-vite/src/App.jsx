@@ -21,7 +21,7 @@ const App = () => (
             <div className='app'>
                 <NavLink to='/'>Login</NavLink>
                 <NavLink to='/AnswerCheckerPage'>Answer Checker</NavLink>
-                <NavLink to='/AnsweStatistics'>Answer Statistics</NavLink>
+                <NavLink to='/AnswerStatistics'>Answer Statistics</NavLink>
             </div>
         </header>
 
