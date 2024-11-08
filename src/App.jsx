@@ -1,4 +1,4 @@
-import React from "https://cdn.skypack.dev/react";
+//import React from "https://cdn.skypack.dev/react";
 import ReactDOM from "https://cdn.skypack.dev/react-dom";
 import {
     BrowserRouter,
@@ -12,8 +12,7 @@ import AnswerChecker from "./AnswerCheckerPage"
 import AnswerStats from "./AnswerStatistics"
 
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+const App = () => (
     <BrowserRouter>
         <header>
             <h1>
@@ -45,3 +44,5 @@ root.render(
         </footer>
     </BrowserRouter>
 );
+
+export default App;
