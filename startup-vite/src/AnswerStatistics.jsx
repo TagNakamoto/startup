@@ -2,8 +2,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../../AnswerStatistics.css';
+import { useNavigate } from 'react-router-dom';
 
 function AnswerStats() {
+    const navigate = useNavigate();
+    const handleLogoutClick = (e) => {
+        e.preventDefault();
+        navigate('/');
+    };
+
     return (
         <div>
                 <h2>Student Answer Statistics</h2>
@@ -24,7 +31,7 @@ function AnswerStats() {
 
                 <form method="get" action="#">
                     <div>
-                        <button type="button">Log Out</button>
+                    <button type="button" onClick={handleLogoutClick}>Log Out</button>
                     </div>
                 </form>
         </div>

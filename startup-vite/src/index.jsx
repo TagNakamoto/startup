@@ -29,7 +29,7 @@ function Login() {
                     <span>Password</span>
                     <input type="password" placeholder="password" />
                 </div>
-                <button type="button" onClick={handleLoginClick}>Login</button>*/}
+                <button type="button" onClick={handleLoginClick}>Login</button>
                 <button type="button" onClick={handleCreateClick}>Create</button>
             </form>
         </div>
