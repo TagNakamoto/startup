@@ -7,10 +7,12 @@ img {
     vertical-align: top;
 }
 header {
+    padding:5px;
     text-align: center;
     flex: 0 50px;
     background: hsl(130, 80%, 25%);
     justify-content: center;
+    flex-shrink:0;
 }
 
 h1 {
@@ -21,32 +23,35 @@ h1 {
     margin-bottom: 1px;
 }
 
-.nav-menu {
+.app {
     margin: 5px 5px 5px 5px;
     padding: 0;
     list-style-type: none;
     display: flex;
     justify-content: left;
     text-decoration: none;
+    gap:20px;
 }
 
-.nav-menu li {
-        margin: 0 5px;
+.app.NavLink {
+        padding : 5px;
+        margin: 0 7px;
         text-decoration: none;
 }
 
 main {
     flex: 1;
+    flex-grow: 1;
     font-size: 20px;
     display: flex;
     align-items: center;
     flex-direction: column;
-    justify-content: start;
+    justify-content: flex-start;
     color: black;
     flex-grow: 1;
 }
 
-html, body {
+html, body, #root{
     height: 100%;
     margin: 0;
     display: flex;
@@ -64,56 +69,19 @@ span {
     text-align: center;
 }
 
-/*table {
-    width: 80%;
-    border-collapse: collapse;
-    margin: 20px 0;
-    text-align: center;
+p {
+    color:black;
 }
-
-thead {
-    background-color: hsl(130, 80%, 25%);
-    color: white;
-}
-
-table text {
-    color: black;
-}
-
-tbody {
-    font-size: 12px;
-    color: black;
-}
-
-th {
-    color: white;
-    padding: 12px 15px;
-    border: 1px solid #dddddd;
-    text-align: center;
-}
-
-td {
-    color: black;
-    padding: 12px 15px;
-    border: 1px solid #dddddd;
-    text-align: center;
-}
-
-tr {
-    color: black;
-}*/
-/*tbody tr:nth-child(even) {
-    background-color: #f2f2f2;*/ /* Stripe the table rows */
-/*}*/
 
 button {
     color: black;
 }
 
 footer {
-    flex: 0 20px;
+    flex-shrink:0;
     background: hsl(180, 10%, 10%);
     color: white;
+    margin-top: auto;
 }
 
 .text-reset {

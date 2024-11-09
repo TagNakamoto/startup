@@ -22,17 +22,21 @@ h1 {
     margin-bottom: 1px;
 }
 
-.nav-menu {
+.app {
     margin: 5px 5px 5px 5px;
     padding: 0;
     list-style-type: none;
     display: flex;
     justify-content: left;
+    text-decoration: none;
+    gap: 20px;
 }
 
-.nav-menu li {
-        margin: 0 5px;
-}
+.app.NavLink {
+        padding: 5px;
+        margin: 0 7px;
+        text-decoration: none;
+
 main {
     flex: 1;
     font-size: 20px;
@@ -43,7 +47,7 @@ main {
     justify-content: start;
     flex-grow: 1;
 }
-html, body {
+html, body, #root {
     height: 100%;
     margin:0;
     display:flex;

@@ -61,6 +61,7 @@ html, body {
 
 h2 {
     color: black;
+    justify-content: center;
 }
 
 span {
@@ -73,6 +74,7 @@ table {
     border-collapse: collapse;
     margin: 20px 0;
     text-align: center;
+    justify-content:center;
 }
 
 thead {
@@ -129,6 +131,11 @@ a {
 a:hover{
     color: aqua;
     text-decoration: underline;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .container-fluid {
     display: flex;
