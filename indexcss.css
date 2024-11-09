@@ -32,10 +32,11 @@ h1 {
     gap: 20px;
 }
 
-.app.NavLink {
+    .app.NavLink {
         padding: 5px;
         margin: 0 7px;
         text-decoration: none;
+    }
 
 main {
     flex: 1;
