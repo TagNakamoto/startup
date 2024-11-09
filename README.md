@@ -49,3 +49,13 @@ For the CSS deliverable I styled the following:
 	- **Application Elements** - Elements and whitespace looks good.    
 	- **Images** - Shifted spacing to be pleasing.  
 	- **Application Text** - I made sure there were consistent fonts.  
+
+## React Deliverable  
+For the CSS deliverable I styled the following:  
+	- **Bundled and transpiled**  
+	- **Components:** Login, logout, and answer checking is mocked up  
+		- **Login:** Clicking login or create sends the user to the answer checker. Later, databases will be connected to authenticate     
+		- **Logout:** Clicking Logout sends user back to Login    
+		- **Check Answer** Indicates that the answer was checked. This will later be fleshed out with websocket  
+	- **Router:** Links together all pages  
+	- **Hooks:** Links together pages for login and logout, then connects the user input to the outputted message for the answer checker
