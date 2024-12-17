@@ -178,3 +178,118 @@ console.log(obj, json, objFromJson);
 // {"a":2, "b":"crockford"}
 // {a: 2, b: 'crockford'}
 ```
+1. Default Ports for Common Protocols
+   - HTTP: Port 80
+   - HTTPS: Port 443
+   - SSH: Port 22
+
+2. HTTP Status Codes
+   - 300 Range (Redirection): The requested resource has moved, requiring client redirection. Examples:
+     - 301 (Moved Permanently)
+     - 302 (Found/Temporary Redirect)
+   - 400 Range (Client Errors): Indicates a problem with the request. Examples:
+     - 400 (Bad Request)
+     - 404 (Not Found)
+   - 500 Range (Server Errors): Indicates a problem on the server side. Examples:
+     - 500 (Internal Server Error)
+     - 503 (Service Unavailable)
+
+3. HTTP Header: Content-Type
+   - Specifies the media type of the resource being sent or received.
+   - Example: Content-Type: application/json tells the client/server the body is in JSON format.
+
+4. Cookie Types
+   - Secure Cookie: Transmitted only over HTTPS. Does not protect cookie from JS and client attacks unless used with HttpOnly.  
+   - HttpOnly Cookie: Inaccessible to JavaScript, reducing XSS vulnerabilities.  Used with data that should not be seen by client code. Keeps cookies accessible only with HTTP. Susceptible to CSRF, and cannot work with JS  
+   - SameSite Cookie: Restricts cross-site requests to prevent CSRF attacks (for security).
+     - Strict: Only sent with requests from the same site.
+     - Lax: Sent with top-level navigation (links) or same-site requests.
+
+5. Express Middleware Console Log Example
+   - For an HTTP GET request with /api/document, the middleware logs request details.
+     Middleware Example:
+       app.use((req, res, next) => {
+           console.log(`${req.method} ${req.path}`);
+           next();
+       });
+     Console Output: GET /api/document
+
+6. Fetch with Express Service
+   - Example Service:
+       app.get('/api/example', (req, res) => res.send({ msg: "Hello, World!" }));
+   - Frontend Fetch:
+       fetch('/api/example')
+           .then(response => response.json())
+           .then(console.log);
+   - Output: { msg: "Hello, World!" }
+
+7. MongoDB Query
+   - Query: { name: "Mark" }
+     - Matches documents where the name field is exactly "Mark".
+     - Example Document: { _id: ObjectId("123"), name: "Mark" }
+
+8. User Password Storage
+   - Always hash passwords using a strong algorithm like bcrypt.
+   - Never store plain-text passwords in the database.
+
+9. WebSocket Code Example
+   - Backend:
+       const WebSocket = require('ws');
+       const wss = new WebSocket.Server({ port: 8080 });
+       wss.on('connection', ws => {
+           ws.send('Welcome!');
+       });
+   - Frontend:
+       const ws = new WebSocket('ws://localhost:8080');
+       ws.onmessage = event => console.log(event.data);
+   - Output: "Welcome!"
+
+10. WebSocket Protocol
+    - Provides full-duplex communication over a single TCP connection for real-time data exchange.
+
+11. Acronyms
+    - JSX: JavaScript XML
+    - JS: JavaScript
+    - AWS: Amazon Web Services
+    - NPM: Node Package Manager
+    - NVM: Node Version Manager
+
+12. React Component Text Content
+    - Example React Component:
+        const MyComponent = ({ name }) => <h1>Hello, {name}!</h1>;
+    - With name="Mark", output: "Hello, Mark!"
+
+13. React Component Nesting
+    - Given nested React components, the output will be the combined DOM tree representing all rendered components.
+
+14. React.useState Hook
+    - Enables state management within functional components.
+
+15. React Hooks
+    - Provide access to state and lifecycle features in functional components.
+
+16. Specific React Hooks
+    - State Hook: Manages local state.
+    - Context Hook: Shares state globally.
+    - Ref Hook: Accesses DOM elements.
+    - Effect Hook: Handles side effects like data fetching.
+    - Performance Hook: Optimizes rendering performance.
+
+17. React Router Code
+    - Provides dynamic routing capabilities in React apps.
+    - Enables navigation and URL management.
+
+18. package.json File
+    - Describes a Node.js project, listing dependencies and scripts.
+
+19. Fetch Function
+    - Makes HTTP requests from the frontend to a backend or API.
+
+20. Node.js
+    - A runtime environment for executing JavaScript on the server.
+
+21. pm2
+    - A process manager for running and monitoring Node.js applications.
+
+22. Vite
+    - A modern frontend build tool for faster development.
