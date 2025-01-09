@@ -51,7 +51,7 @@ For the CSS deliverable I styled the following:
 	- **Application Text** - I made sure there were consistent fonts.  
 
 ## React Deliverable  
-For the CSS deliverable I styled the following:  
+For the REACT deliverable I altered the following:  
 	- **Bundled and transpiled**  
 	- **Components:** Login, logout, and answer checking is mocked up  
 		- **Login:** Clicking login or create sends the user to the answer checker. Later, databases will be connected to authenticate     
