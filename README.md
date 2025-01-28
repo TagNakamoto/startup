@@ -1,4 +1,4 @@
-# Startup: Answer Checker  
+.# Startup: Answer Checker  
 An application to allow teachers and tutors to have students check their answers in real time and provides information on which problems people are missing the most to the teacher in charge.  
 
 ## Specification Deliverable
@@ -22,7 +22,7 @@ This will alleviate stresses put on teachers and teaching assistants in universi
 
 4. **React** - Account for user input and interaction (buttons, inputs, results)  
 
-5. **Web Service** - Connecting to an API that checks answers against a database of properties  
+5. **Web Service** - Answer checker will load a quote from the "Zen Quotes" API to encourage the students.   
 
 6. **Authentication** - Allowing students and teachers to log in or create accounts.  
 
@@ -34,7 +34,7 @@ This will alleviate stresses put on teachers and teaching assistants in universi
 ## HTML Deliverable  
 For the startup HTML I implemented:  
 	- **HTML Pages** - Three HTML pages for login, answer checking (AnswerCheckerPage), and answer statistics (AnswerStatistics).  
-	- **3rd Party API** - Answer checker will pull data from a material property API as example answers.  
+	- **3rd Party API** - Answer checker will load a quote from the "Zen Quotes" API to encourage the students. Place is held by the text "Keep Up The Good Work."
 	- **Links** - Each page links to the GitHub for the project. Functionality to link from login to other pages based off login information. Links interconnect all pages for testing and grading purposes.   
 	- **Text** - Added text to explain webpages and cue user input.  
 	- **Images** - Added checkmark image as a kind of logo.  
