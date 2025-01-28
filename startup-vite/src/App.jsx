@@ -14,7 +14,7 @@ import AnswerStats from "./AnswerStatistics"
 
 const App = () => (
     <BrowserRouter>
-        <body>
+        <div>
             <header>
                 <h1>
                     Answer Checker <img alt="Checkmark" width="30" height="30" src="https://www.publicdomainpictures.net/pictures/130000/velka/check-mark-icon.jpg" />
@@ -44,7 +44,7 @@ const App = () => (
 
             </footer>
 
-        </body>
+        </div>
         
     </BrowserRouter>
 );
