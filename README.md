@@ -34,7 +34,7 @@ This will alleviate stresses put on teachers and teaching assistants in universi
 ## HTML Deliverable  
 For the startup HTML I implemented:  
 	- **HTML Pages** - Three HTML pages for login, answer checking (AnswerCheckerPage), and answer statistics (AnswerStatistics).  
-	- **3rd Party API** - Answer checker will load a quote from the "Zen Quotes" API to encourage the students. Place is held by the text "Keep Up The Good Work."
+	- **3rd Party API** - Answer checker will load a quote from the "Zen Quotes" API to encourage the students. Place is held by the text "Keep Up The Good Work."  
 	- **Links** - Each page links to the GitHub for the project. Functionality to link from login to other pages based off login information. Links interconnect all pages for testing and grading purposes.   
 	- **Text** - Added text to explain webpages and cue user input.  
 	- **Images** - Added checkmark image as a kind of logo.  
