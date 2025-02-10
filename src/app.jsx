@@ -10,7 +10,7 @@ import { AnswerStatistics } from './AnswerStatistics/AnswerStatistics';
 export default function App() {
     return (
         <BrowserRouter>
-            <body>
+            
                 <header>
                     <h1>
                         Answer Checker <img alt="Checkmark" width="30" height="30" src="https://www.publicdomainpictures.net/pictures/130000/velka/check-mark-icon.jpg" />
@@ -47,9 +47,6 @@ export default function App() {
                     </div>
 
                 </footer>
-
-            </body>
-
         </BrowserRouter>
     );
 }
