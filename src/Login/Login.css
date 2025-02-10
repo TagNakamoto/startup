@@ -4,9 +4,9 @@
     color: white;
     box-sizing: border-box;
 }
-img {
+/*img {
     vertical-align: top;
-}
+}*/
 header {
     text-align: center;
     flex: 0 50px;
