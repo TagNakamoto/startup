@@ -48,4 +48,10 @@ For the CSS deliverable I styled the following:
 	- **Links** - I got rid of the underlines for link elements and made them cyan when hovered over.     
 	- **Application Elements** - Elements and whitespace looks good.    
 	- **Images** - Shifted spacing to be pleasing.  
-	- **Application Text** - I made sure there were consistent fonts.  
+	- **Application Text** - I made sure there were consistent fonts.   
+## React Deliverable  
+For the CSS deliverable I styled the following:  
+	- **Bundled and transpiled**  
+	- **Components:** Login, logout, and answer checking is mocked up in respective jsx files and using their respective css files, with shared parts found in app.jsx and css  
+	- Parts mocking up requirements are the same as previous parts  
+ 	- Navigation uses browser router and connects all the pages of site
