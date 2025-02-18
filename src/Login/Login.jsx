@@ -1,7 +1,9 @@
 import React from 'react';
 import './Login.css';
 
-export function Login() {
+import { Authstate } from './authState';
+
+export function Login({ userName, authState, onAuthChange }) {
     return (
         <main>
             <h2>Welcome to the Answer Checker</h2>
