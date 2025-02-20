@@ -6,8 +6,13 @@ import { BrowserRouter, NavLink, Route, Routes } from 'react-router-dom';
 import { Login } from './Login/Login';
 import { AnswerChecker } from './AnswerChecker/AnswerChecker';
 import { AnswerStatistics } from './AnswerStatistics/AnswerStatistics';
+import { AuthState } from './login/authState';
 
 export default function App() {
+    const [userName, setUserName] = React.useState(localStorage.getItem('userName') || '');
+    const currentAuthState = userName ? AuthState.Authenticated : AuthState.Unauthenticated;
+    const [authState, setAuthState] = React.useState(currentAuthState);
+
     return (
         <BrowserRouter>
             
@@ -32,7 +37,16 @@ export default function App() {
 
                 <main>
                     <Routes>
-                        <Route path='/' element={<Login />} />
+                        <Route path='/'
+                            element={<Login
+                                userName={userName}
+                                authState={authState}
+                                onAuthChange={(userName, authState) => {
+                                    setAuthState(authState);
+                                    setUserName(userName);
+                                }}
+                            />}
+                        />
                         <Route path='/AnswerChecker' element={<AnswerChecker />} />
                         <Route path='/AnswerStatistics' element={<AnswerStatistics />} />
                         <Route path='*' element={<NotFound />} />
