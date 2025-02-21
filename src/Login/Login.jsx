@@ -2,22 +2,24 @@ import React from 'react';
 import './Login.css';
 
 import Button from 'react-bootstrap/Button';
-
+import { useNavigate } from 'react-router-dom';
 import { AuthState } from './authState';
 
 export function Login({ userName, authState, onAuthChange }) {
     const [localUserName, setUserName] = React.useState('');
     const [password, setPassword] = React.useState('');
     const [displayError, setDisplayError] = React.useState(null);
-
+    const navigate = useNavigate();
     async function loginUser() {
         localStorage.setItem('userName', localUserName);
         onAuthChange(localUserName, AuthState.Authenticated);
+        navigate('/AnswerChecker');
     }
 
     async function createUser() {
         localStorage.setItem('userName', localUserName);
         onAuthChange(localUserName, AuthState.Authenticated);
+        navigate('/AnswerChecker');
     }
 
     //right now loginUser and createUser do the same thing, because we don't have a database to access and authenticate

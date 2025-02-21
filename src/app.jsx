@@ -21,16 +21,23 @@ export default function App() {
                         Answer Checker <img alt="Checkmark" width="30" height="30" src="https://www.publicdomainpictures.net/pictures/130000/velka/check-mark-icon.jpg" />
                     </h1>
                     <menu>
-                        <div className='nav-menu'>
+                    <div className='nav-menu'>
+                            {authState !== AuthState.Authenticated && (
                             <li className='nav-item'>
                                 <NavLink to='/'>Login</NavLink>
                             </li>
-                            <li className='nav-item'>
-                                <NavLink to='/AnswerChecker'>Answer Checker</NavLink>
-                            </li>
-                            <li className='nav-item'>
-                                <NavLink to='/AnswerStatistics'>Answer Statistics</NavLink>
-                            </li>
+                            )}
+
+                            {authState == AuthState.Authenticated && (
+                                <li className='nav-item'>
+                                    <NavLink to='/AnswerChecker'>Answer Checker</NavLink>
+                                </li>
+                            )}
+                            {authState == AuthState.Authenticated && (
+                                <li className='nav-item'>
+                                    <NavLink to='/AnswerStatistics'>Answer Statistics</NavLink>
+                                </li>
+                            )}
                         </div>
                     </menu>
                 </header>
@@ -47,8 +54,25 @@ export default function App() {
                                 }}
                             />}
                         />
-                        <Route path='/AnswerChecker' element={<AnswerChecker />} />
-                        <Route path='/AnswerStatistics' element={<AnswerStatistics />} />
+                        <Route path='/AnswerChecker'
+                            element={<AnswerChecker
+                                    userName={userName}
+                                    authState={authState}
+                                    onAuthChange={(userName, authState) => {
+                                        setAuthState(authState);
+                                        setUserName(userName);
+                                    }}
+                                />}
+                            />
+                    <Route path='/AnswerStatistics'
+                        element={<AnswerStatistics
+                            userName={userName}
+                            authState={authState}
+                            onAuthChange={(userName, authState) => {
+                                setAuthState(authState);
+                                setUserName(userName);
+                            }}
+                    />} />
                         <Route path='*' element={<NotFound />} />
                     </Routes>
                 </main>
