@@ -6,13 +6,20 @@ import { useNavigate } from 'react-router-dom';
 import { AuthState } from '../Login/authState';
 export function AnswerStatistics({ userName, authState, onAuthChange }) {
     const [displayError, setDisplayError] = React.useState(null);
+    const [numerator, setNumerator] = React.useState("Loading...");
+    const [denominator, setDenominator] = React.useState("Loading...");
     const navigate = useNavigate();
 
     function logout() {
         localStorage.removeItem('userName');
         onAuthChange(userName, AuthState.Unauthenticated);
-        navigate('/')
+        navigate('/');
     }
+
+    React.useEffect(() => {
+        setNumerator('6');
+        setDenominator('10');
+    });
 
     return (
         <main>
@@ -27,7 +34,7 @@ export function AnswerStatistics({ userName, authState, onAuthChange }) {
                 <tbody>
                     <tr>
                         <td>1</td>
-                        <td>5/10</td>
+                        <td>{numerator}/{denominator}</td>
                     </tr>
                 </tbody>
             </table>

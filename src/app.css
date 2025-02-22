@@ -116,3 +116,8 @@ a:hover {
     color: aqua;
     text-decoration: underline;
 }
+
+.btn-primary {
+    background-color: hsl(130, 80%, 25%);
+    border-color: hsl(130, 80%, 25%);
+}

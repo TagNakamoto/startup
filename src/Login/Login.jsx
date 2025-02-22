@@ -1,5 +1,6 @@
 import React from 'react';
 import './Login.css';
+import '../App.css'
 
 import Button from 'react-bootstrap/Button';
 import { useNavigate } from 'react-router-dom';
@@ -44,7 +45,7 @@ export function Login({ userName, authState, onAuthChange }) {
                         onChange={(e) =>setPassword(e.target.value) }
                     />
                 </div>
-                <Button variant='primary' onClick={() => loginUser()} disabled={!localUserName || !password}>
+                <Button style={{ backgroundColor: "#0D731E", borderColor: "#0D731E" }} variant='primary' onClick={() => loginUser()} disabled={!localUserName || !password}>
                     Login
                 </Button>
                 <Button variant='secondary' onClick={() => createUser()} disabled={!localUserName || !password}>
