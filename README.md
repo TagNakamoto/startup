@@ -49,9 +49,21 @@ For the CSS deliverable I styled the following:
 	- **Application Elements** - Elements and whitespace looks good.    
 	- **Images** - Shifted spacing to be pleasing.  
 	- **Application Text** - I made sure there were consistent fonts.   
-## React Deliverable  
-For the CSS deliverable I styled the following:  
+## React Deliverable Part 1  
+For the REACT part 1 deliverable I did the following:  
 	- **Bundled and transpiled**  
 	- **Components:** Login, logout, and answer checking is mocked up in respective jsx files and using their respective css files, with shared parts found in app.jsx and css  
 	- Parts mocking up requirements are the same as previous parts  
- 	- Navigation uses browser router and connects all the pages of site
+ 	- Navigation uses browser router and connects all the pages of site  
+
+## React Deliverable Part 2   
+For the REACT part 2 deliverable I did the following:  
+- **Bundled and transpiled**  
+- **Components:** Login, logout, and answer checking is mocked up with jsx as possible.  
+  - Login leads to answer checker when username and password are provided, authenticating them. Otherwise other pages are hidden.    
+  - Answer checker can check the answer to question 1, giving a message depending on if the input is correct or incorrect. Quote is displayed using JS.     
+  - Answer statistics populates table using JS for future tracking using databases and updated with websocket.  
+  - Answer checker and statistics can log out to return to login page and hide other pages.  
+- **Hooks**  
+  - useState tracks variables that will be updated, such as the quote and table values. They are updated automatically now but will be done with other technologies later.  
+  - useEffect hook updates the variables using set values currently, but will implement other technologies to do so in later stages.  
