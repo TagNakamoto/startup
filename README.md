@@ -61,7 +61,7 @@ For the REACT part 2 deliverable I did the following:
 - **Bundled and transpiled**  
 - **Components:** Login, logout, and answer checking is mocked up with jsx as possible.  
   - Login leads to answer checker when username and password are provided, authenticating them. Otherwise other pages are hidden.    
-  - Answer checker can check the answer to question 1, giving a message depending on if the input is correct or incorrect. Quote is displayed using JS.     
+  - Answer checker can check the answer to question 1, giving a message depending on if the input is correct or incorrect (stand-in answer is 3.14). Quote is displayed using JS.     
   - Answer statistics populates table using JS for future tracking using databases and updated with websocket.  
   - Answer checker and statistics can log out to return to login page and hide other pages.  
 - **Hooks**  
