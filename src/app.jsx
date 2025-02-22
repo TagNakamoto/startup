@@ -6,8 +6,13 @@ import { BrowserRouter, NavLink, Route, Routes } from 'react-router-dom';
 import { Login } from './Login/Login';
 import { AnswerChecker } from './AnswerChecker/AnswerChecker';
 import { AnswerStatistics } from './AnswerStatistics/AnswerStatistics';
+import { AuthState } from './login/authState';
 
 export default function App() {
+    const [userName, setUserName] = React.useState(localStorage.getItem('userName') || '');
+    const currentAuthState = userName ? AuthState.Authenticated : AuthState.Unauthenticated;
+    const [authState, setAuthState] = React.useState(currentAuthState);
+
     return (
         <BrowserRouter>
             
@@ -16,25 +21,58 @@ export default function App() {
                         Answer Checker <img alt="Checkmark" width="30" height="30" src="https://www.publicdomainpictures.net/pictures/130000/velka/check-mark-icon.jpg" />
                     </h1>
                     <menu>
-                        <div className='nav-menu'>
+                    <div className='nav-menu'>
+                            {authState !== AuthState.Authenticated && (
                             <li className='nav-item'>
                                 <NavLink to='/'>Login</NavLink>
                             </li>
-                            <li className='nav-item'>
-                                <NavLink to='/AnswerChecker'>Answer Checker</NavLink>
-                            </li>
-                            <li className='nav-item'>
-                                <NavLink to='/AnswerStatistics'>Answer Statistics</NavLink>
-                            </li>
+                            )}
+
+                            {authState == AuthState.Authenticated && (
+                                <li className='nav-item'>
+                                    <NavLink to='/AnswerChecker'>Answer Checker</NavLink>
+                                </li>
+                            )}
+                            {authState == AuthState.Authenticated && (
+                                <li className='nav-item'>
+                                    <NavLink to='/AnswerStatistics'>Answer Statistics</NavLink>
+                                </li>
+                            )}
                         </div>
                     </menu>
                 </header>
 
                 <main>
                     <Routes>
-                        <Route path='/' element={<Login />} />
-                        <Route path='/AnswerChecker' element={<AnswerChecker />} />
-                        <Route path='/AnswerStatistics' element={<AnswerStatistics />} />
+                        <Route path='/'
+                            element={<Login
+                                userName={userName}
+                                authState={authState}
+                                onAuthChange={(userName, authState) => {
+                                    setAuthState(authState);
+                                    setUserName(userName);
+                                }}
+                            />}
+                        />
+                        <Route path='/AnswerChecker'
+                            element={<AnswerChecker
+                                    userName={userName}
+                                    authState={authState}
+                                    onAuthChange={(userName, authState) => {
+                                        setAuthState(authState);
+                                        setUserName(userName);
+                                    }}
+                                />}
+                            />
+                    <Route path='/AnswerStatistics'
+                        element={<AnswerStatistics
+                            userName={userName}
+                            authState={authState}
+                            onAuthChange={(userName, authState) => {
+                                setAuthState(authState);
+                                setUserName(userName);
+                            }}
+                    />} />
                         <Route path='*' element={<NotFound />} />
                     </Routes>
                 </main>
