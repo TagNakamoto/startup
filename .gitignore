@@ -5,4 +5,5 @@
 /.vs
 /CS260Server.pem
 /node_modules
+/service/node_modules
 
