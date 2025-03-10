@@ -11,9 +11,17 @@ export function AnswerStatistics({ userName, authState, onAuthChange }) {
     const navigate = useNavigate();
 
     function logout() {
-        localStorage.removeItem('userName');
-        onAuthChange(userName, AuthState.Unauthenticated);
-        navigate('/');
+        fetch(`/api/auth/logout`, {
+            method: 'delete',
+        })
+            .catch(() => {
+
+            })
+            .finally(() => {
+                localStorage.removeItem('userName');
+                onAuthChange(userName, AuthState.Unauthenticated);
+                navigate('/');
+            });
     }
 
     React.useEffect(() => {

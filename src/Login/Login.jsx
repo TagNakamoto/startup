@@ -12,7 +12,7 @@ export function Login({ userName, authState, onAuthChange }) {
     const [displayError, setDisplayError] = React.useState(null);
     const navigate = useNavigate();
     async function loginUser() {
-        loginOrCreate(`api/auth/login`);
+        loginOrCreate(`/api/auth/login`);
     }
 
     async function createUser() {

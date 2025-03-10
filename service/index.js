@@ -18,7 +18,7 @@ app.use(express.static('public'));
 
 //Router
 var apiRouter = express.Router();
-app.use('/api', apiRouter);
+app.use(`/api`, apiRouter);
 
 app.listen(port, () => {
     console.log(`Listening on port ${port}`);
@@ -52,7 +52,7 @@ function getUser(field, value) {
 }
 
 //Create User
-app.post('/api/auth/create', async (req, res) => {
+apiRouter.post('/auth/create', async (req, res) => {
     if (await getUser('email', req.body.email)) {
         res.status(409).send({ msg: 'Existing user' });
     } else {
@@ -63,7 +63,7 @@ app.post('/api/auth/create', async (req, res) => {
 })
 
 //Log in User
-app.post('/api/auth/login', async (req, res) => {
+apiRouter.post('/auth/login', async (req, res) => {
     const user = await getUser('email', req.body.email);
     if (user && (await bcrypt.compare(req.body.password, user.password))) {
         setAuthCookie(res, user);
@@ -73,3 +73,22 @@ app.post('/api/auth/login', async (req, res) => {
         res.status(401).send({ msg: 'Unauthorized' });
     }
 })
+
+apiRouter.delete('/auth/logout', async (req, res) => {
+    const user = await getUser('token', req.cookies[authCookieName]);
+    if (user) {
+        delete user.token;
+    }
+    res.clearCookie(authCookieName);
+    res.status(204).end();
+});
+
+const verifyAuth = async (req, res, next) => {
+    const user = await getUser('token', req.cookies[authCookieName]);
+    if (user) {
+        next();
+    }
+    else {
+        res.status(401).send({ msg: 'Unauthorized' });
+    }
+};
