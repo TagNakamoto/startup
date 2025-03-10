@@ -12,15 +12,30 @@ export function Login({ userName, authState, onAuthChange }) {
     const [displayError, setDisplayError] = React.useState(null);
     const navigate = useNavigate();
     async function loginUser() {
-        localStorage.setItem('userName', localUserName);
-        onAuthChange(localUserName, AuthState.Authenticated);
-        navigate('/AnswerChecker');
+        loginOrCreate(`api/auth/login`);
     }
 
     async function createUser() {
-        localStorage.setItem('userName', localUserName);
-        onAuthChange(localUserName, AuthState.Authenticated);
-        navigate('/AnswerChecker');
+        loginOrCreate(`/api/auth/create`);
+    }
+
+    async function loginOrCreate(endpoint) {
+        const response = await fetch(endpoint, {
+            method: 'post',
+            body: JSON.stringify({ email: userName, password: password }),
+            headers: {
+                'Content-type': 'application/json; charset=UTF-8',
+            },
+        });
+        if (response?.status === 200) {
+            localStorage.setItem('userName', localUserName);
+            onAuthChange(localUserName, AuthState.Authenticated);
+            navigate('/AnswerChecker');
+        }
+        else {
+            const body = await response.json();
+            setDisplayError(`⚠ Error: ${body.msg}`);
+        }
     }
 
     //right now loginUser and createUser do the same thing, because we don't have a database to access and authenticate

@@ -52,7 +52,7 @@ function getUser(field, value) {
 }
 
 //Create User
-app.post('/api/auth', async (req, res) => {
+app.post('/api/auth/create', async (req, res) => {
     if (await getUser('email', req.body.email)) {
         res.status(409).send({ msg: 'Existing user' });
     } else {
@@ -63,7 +63,7 @@ app.post('/api/auth', async (req, res) => {
 })
 
 //Log in User
-app.put('/api/auth', async (req, res) => {
+app.post('/api/auth/login', async (req, res) => {
     const user = await getUser('email', req.body.email);
     if (user && (await bcrypt.compare(req.body.password, user.password))) {
         setAuthCookie(res, user);
