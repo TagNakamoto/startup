@@ -2,6 +2,7 @@ const cookieParser = require('cookie-parser');
 const bcrypt = require('bcryptjs');
 const express = require('express');
 const uuid = require('uuid');
+const path = require('path');
 const app = express();
 
 const authCookieName = 'token';
@@ -14,7 +15,7 @@ app.use(express.json());
 
 app.use(cookieParser());
 
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, 'public')));
 
 //Router
 var apiRouter = express.Router();
@@ -90,5 +91,10 @@ const verifyAuth = async (req, res, next) => {
     }
     else {
         res.status(401).send({ msg: 'Unauthorized' });
+        res.sendFile(path.join(__dirname, 'public', 'index.html'))
     }
 };
+
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});

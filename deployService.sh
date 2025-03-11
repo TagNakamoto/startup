@@ -49,3 +49,6 @@ ENDSSH
 printf "\n----> Removing local copy of the distribution package\n"
 rm -rf build
 rm -rf dist
+
+echo "Press any key to exit..."
+read -n 1 -s
