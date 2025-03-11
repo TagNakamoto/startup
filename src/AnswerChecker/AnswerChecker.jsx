@@ -9,10 +9,10 @@ export function AnswerChecker({ userName, authState, onAuthChange }) {
     const [displayError, setDisplayError] = React.useState(null);
     const navigate = useNavigate();
     const [quote, setQuote] = React.useState('Loading...');
+    const [author, setAuthor] = React.useState('Loading...');
     const [answer, setAnswer] = React.useState('Loading...');
     const [inputAnswer, setInputAnswer] = React.useState('Loading...');
     const [isCorrect, setIsCorrect] = useState(null);
-  
 
     function logout() {
         fetch(`/api/auth/logout`, {
@@ -28,8 +28,29 @@ export function AnswerChecker({ userName, authState, onAuthChange }) {
             });
     }
 
+    const api_url = "https://api.allorigins.win/get?url=" + encodeURIComponent("https://zenquotes.io/api/quotes/random");
+
+    async function getapi(url) {
+        try {
+            const response = await fetch(url);
+            const data = await response.json();
+
+            const quotes = JSON.parse(data.contents);
+
+            if (quotes && quotes.length > 0) {
+                const firstQuote = quotes[0];
+                setQuote(firstQuote.q); 
+                setAuthor(firstQuote.a);
+            }
+        } catch (error) {
+            console.error("Error fetching quote:", error);
+        }
+    }
+
+
+
     React.useEffect(() => {
-        setQuote('Keep Up The Good Work!');
+        getapi(api_url);
         setAnswer(3.14);
     }, []);
 
@@ -70,7 +91,8 @@ export function AnswerChecker({ userName, authState, onAuthChange }) {
             </div>
             )}
 
-            <b>{ quote }</b>
+            <b>{quote}</b>
+            <b>{author}</b>
             <div className="logOut">
                 <Button variant='primary'
                     onClick={() => logout()}>

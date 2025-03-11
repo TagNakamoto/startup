@@ -7,6 +7,7 @@ import { Login } from './Login/Login';
 import { AnswerChecker } from './AnswerChecker/AnswerChecker';
 import { AnswerStatistics } from './AnswerStatistics/AnswerStatistics';
 import { AuthState } from './login/authState';
+import { PrivateRoute } from './login/PrivateRoute'
 
 export default function App() {
     const [userName, setUserName] = React.useState(localStorage.getItem('userName') || '');
@@ -53,26 +54,44 @@ export default function App() {
                                     setUserName(userName);
                                 }}
                             />}
-                        />
-                        <Route path='/AnswerChecker'
-                            element={<AnswerChecker
-                                    userName={userName}
-                                    authState={authState}
-                                    onAuthChange={(userName, authState) => {
-                                        setAuthState(authState);
-                                        setUserName(userName);
-                                    }}
-                                />}
+                    />
+                    <Route
+                        path="/AnswerStatistics"
+                        element={
+                            <PrivateRoute
+                                element={
+                                    <AnswerStatistics
+                                        userName={userName}
+                                        authState={authState}
+                                        onAuthChange={(userName, authState) => {
+                                            setAuthState(authState);
+                                            setUserName(userName);
+                                        }}
+                                    />
+                                }
+                                isAuthenticated={authState === AuthState.Authenticated}
                             />
-                    <Route path='/AnswerStatistics'
-                        element={<AnswerStatistics
-                            userName={userName}
-                            authState={authState}
-                            onAuthChange={(userName, authState) => {
-                                setAuthState(authState);
-                                setUserName(userName);
-                            }}
-                    />} />
+                        }
+                    />
+                        <Route
+                            path="/AnswerChecker"
+                            element={
+                                <PrivateRoute
+                                    element={
+                                        <AnswerChecker
+                                            userName={userName}
+                                            authState={authState}
+                                            onAuthChange={(userName, authState) => {
+                                                setAuthState(authState);
+                                                setUserName(userName);
+                                            }}
+                                        />
+                                    }
+                                    isAuthenticated={authState === AuthState.Authenticated}
+                                />
+                            }
+                        />
+                        
                         <Route path='*' element={<NotFound />} />
                     </Routes>
                 </main>
