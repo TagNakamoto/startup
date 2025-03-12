@@ -95,7 +95,7 @@ const verifyAuth = async (req, res, next) => {
     }
     else {
         res.status(401).send({ msg: 'Unauthorized' });
-        //res.sendFile(path.join(__dirname, 'public', 'index.html'))
+        res.sendFile(path.join(__dirname, 'public', 'index.html'))
     }
 };
 
