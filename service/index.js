@@ -3,11 +3,15 @@ const bcrypt = require('bcryptjs');
 const express = require('express');
 const uuid = require('uuid');
 const path = require('path');
+const { verify } = require('crypto');
 const app = express();
 
 const authCookieName = 'token';
 
 let users = [];
+let numerators = [7];
+let denominators = [10];
+let answers = ['3.14'];
 
 const port = process.argv.length > 2 ? process.argv[2] : 4000
 
@@ -91,10 +95,20 @@ const verifyAuth = async (req, res, next) => {
     }
     else {
         res.status(401).send({ msg: 'Unauthorized' });
-        res.sendFile(path.join(__dirname, 'public', 'index.html'))
+        //res.sendFile(path.join(__dirname, 'public', 'index.html'))
     }
 };
 
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
+
+apiRouter.get('/stats', verifyAuth, (req, res) => {
+    res.send({ nums: numerators, denoms: denominators });
+});
+
+apiRouter.post('/check', verifyAuth, async (req, res) => {
+    const userAnwser = Number(req.body.answer);
+    const isCorrect = (userAnwser === Number(answers[0]));
+    res.send({ isCorrect: isCorrect });
+})

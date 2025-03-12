@@ -25,9 +25,13 @@ export function AnswerStatistics({ userName, authState, onAuthChange }) {
     }
 
     React.useEffect(() => {
-        setNumerator('6');
-        setDenominator('10');
-    });
+        fetch('/api/stats')
+            .then((response) => response.json())
+            .then(({ nums, denoms }) => {
+                setNumerator(nums[0]);
+                setDenominator(denoms[0]);
+            });
+    }, []);
 
     return (
         <main>

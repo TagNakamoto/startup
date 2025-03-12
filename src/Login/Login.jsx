@@ -37,9 +37,6 @@ export function Login({ userName, authState, onAuthChange }) {
             setDisplayError(`⚠ Error: ${body.msg}`);
         }
     }
-
-    //right now loginUser and createUser do the same thing, because we don't have a database to access and authenticate
-
     return (
         <main>
             <h2>Welcome to the Answer Checker</h2>

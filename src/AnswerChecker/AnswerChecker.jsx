@@ -51,14 +51,23 @@ export function AnswerChecker({ userName, authState, onAuthChange }) {
 
     React.useEffect(() => {
         getapi(api_url);
-        setAnswer(3.14);
     }, []);
 
-    function checkAnswer(inputAnswer) {
-        if (Number(inputAnswer) === answer) {
-            setIsCorrect(true);
-        } else {
-            setIsCorrect(false);
+    async function checkAnswer(inputAnswer) {
+        const response = await fetch('/api/check', {
+            method: 'post',
+            body: JSON.stringify({ answer: inputAnswer }),
+            headers: {
+                'Content-type': 'application/json; charset=UTF-8',
+            },
+        });
+        if (response?.status === 200) {
+            const data = await response.json();
+            setIsCorrect(data.isCorrect);
+        }
+        else {
+            const body = await response.json();
+            setDisplayError(`⚠ Error: ${body.msg}`);
         }
     }
 
