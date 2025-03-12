@@ -72,7 +72,7 @@ For the REACT part 2 deliverable I did the following:
 For the service deliverable I did the following:  
 - **Backend uses Node.js and Express**  
 - **Frontend served up by middleware from express**   
-- **Frontend calls third party service endpoint** - Answer Checker loads quotes from zen quotes api   
+- **Frontend calls third party service endpoint** - Answer Checker page loads quotes from zen quotes api   
 - **Backend provides service endpoints** - End points for login, creating user, logging out, checking answers, and loading in statistic data  
 - **Frontend calls service endpoints** - Fetch calls above services.     
 - **Supports registration, login, logout, and restricted endpoints**  
