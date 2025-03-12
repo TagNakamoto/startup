@@ -67,3 +67,12 @@ For the REACT part 2 deliverable I did the following:
 - **Hooks**  
   - useState tracks variables that will be updated, such as the quote and table values. They are updated automatically now but will be done with other technologies later.  
   - useEffect hook updates the variables using set values currently, but will implement other technologies to do so in later stages.  
+
+  ## Service Deliverable   
+For the service deliverable I did the following:  
+- **Backend uses Node.js and Express**  
+- **Frontend served up by middleware from express**   
+- **Frontend calls third party service endpoint** - Answer Checker loads quotes from zen quotes api   
+- **Backend provides service endpoints** - End points for login, creating user, logging out, checking answers, and loading in statistic data  
+- **Frontend calls service endpoints** - Fetch calls above services.     
+- **Supports registration, login, logout, and restricted endpoints**  
